@@ -3,7 +3,13 @@ export const APPLY_NUMBER = "APPLY_NUMBER";
 export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY"
 export const SAVE_TO_MEMORY = "SAVE_TO_MEMORY"
+export const MEMORY_RECALL = 'RECALL_MEMORY'
 
+
+export const recallMemo = () => {
+
+    return({type:MEMORY_RECALL})
+}
 
 export const addOne = () => {
     
