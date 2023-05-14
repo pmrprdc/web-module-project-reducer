@@ -3,7 +3,7 @@ import reducer, {initialState} from '../reducers';
 import './App.css';
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
-import {  applyNumber, changeOperation, clearDisplay } from '../actions';
+import {  applyNumber, changeOperation, clearDisplay, save2memo} from '../actions';
 
 
 
@@ -12,8 +12,14 @@ import {  applyNumber, changeOperation, clearDisplay } from '../actions';
 function App() {
   
 
+
+  const savetomemory = () => {
+    dispatch(save2memo())
+
+  }
+
   const clearCalculator =() => {
-    console.log("clearCalculatorRan")
+   
     dispatch(clearDisplay())
   }
   const handle1Click = (number) => {
@@ -44,7 +50,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
+              <CalcButton value={"M+"} onClick={()=>{
+                dispatch(save2memo())
+              }}/>
               <CalcButton value={"MR"}/>
               <CalcButton value={"MC"}/>
             </div>
