@@ -3,7 +3,7 @@ import reducer, {initialState} from '../reducers';
 import './App.css';
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
-import {  applyNumber, changeOperation, clearDisplay, save2memo, recallMemo} from '../actions';
+import {  clearMemory, applyNumber, changeOperation, clearDisplay, save2memo, recallMemo} from '../actions';
 
 
 
@@ -59,7 +59,9 @@ function App() {
               <CalcButton value={"MR"} onClick={()=>{
                 recallMemory();
               }}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"MC"} onClick={()=>{
+                dispatch(clearMemory())
+              }}/>
             </div>
 
             <div className="row">

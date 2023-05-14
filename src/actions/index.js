@@ -4,7 +4,13 @@ export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY"
 export const SAVE_TO_MEMORY = "SAVE_TO_MEMORY"
 export const MEMORY_RECALL = 'RECALL_MEMORY'
+export const MEMORY_CLEAR = 'CLEAR_MEMORY'
 
+
+
+export const clearMemory = () => {
+    return({type: MEMORY_CLEAR})
+}
 
 export const recallMemo = () => {
 
